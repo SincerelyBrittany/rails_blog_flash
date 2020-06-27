@@ -6,6 +6,18 @@
  <!-- <a href="/about">About Page</a>  -->
 <ul>
 <% @posts.each do |post| %>
-<li><%= post.title %></li>
+ <li>
+   <!-- Using HTML to generate link: -->
+   <!-- <%= post.title %> -->
+   <!-- Using rails to generate link: -->
+   <!-- More abstract, using link but still hardoding URL -->
+   <!-- <%= link_to(post.title, "/posts/#{post.id}") %> -->
+  <!-- More abstract, hard coding .id for post -->
+  <!-- <%= link_to(post.title, post_path(post.id)) %> -->
+  <!-- More abstract, not explicity calling id on post -->
+   <%= link_to(post.title, post_path(post)) %>
+  <!-- More abstract, implicitly calling post_path on id in post -->
+   <!-- <%= link_to(post.title, post) %> -->
+ </li>
 <% end %>
 </ul>
