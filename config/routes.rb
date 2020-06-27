@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get({'/posts' => 'posts#index'})
 
   # get({'/about' => 'static#about'})
+  get '/about' => 'static#about', :as => :about
   get({'/team' => 'static#team'})
 
 
