@@ -1,0 +1,11 @@
+<h1> You are in index </h1>
+
+<!-- Use the ActionView link_to method https://apidock.com/rails/ActionView/Helpers/UrlHelper/link_to -->
+
+<%= link_to("About Page", "/about_path") %>
+ <!-- <a href="/about">About Page</a>  -->
+<ul>
+<% @posts.each do |post| %>
+<li><%= post.title %></li>
+<% end %>
+</ul>
